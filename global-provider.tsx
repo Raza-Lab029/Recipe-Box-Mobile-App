@@ -1,6 +1,6 @@
 // global-provider.tsx
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import { account } from './appwrite'; // your Appwrite client instance
+import { account } from './appwrite'; 
 import { Models } from 'appwrite';
 
 type User = Models.User<Models.Preferences> | null;
