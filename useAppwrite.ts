@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Account, Models } from 'appwrite';
-import { account } from './appwrite'; // your configured Appwrite client
+import { account } from './appwrite'; 
 
 type User = Models.User<Models.Preferences> | null;
 
@@ -9,7 +9,7 @@ export const useAppwrite = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch the current user session
+  
   const fetchUser = async () => {
     try {
       const userData = await account.get();
@@ -22,7 +22,7 @@ export const useAppwrite = () => {
     }
   };
 
-  // Logout
+  
   const logout = async () => {
     try {
       await account.deleteSession('current');
