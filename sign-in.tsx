@@ -28,7 +28,7 @@ const SignIn: React.FC<SignInProps> = ({ onLoginSuccess }) => {
   const [password, setPassword] = useState('');
 
   const [request, response, promptAsync] = Google.useAuthRequest({
-    clientId: 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com', // Replace with real client ID
+    clientId: 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com', 
   });
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const SignIn: React.FC<SignInProps> = ({ onLoginSuccess }) => {
       return;
     }
 
-    // For demo purposes, we'll just simulate a login
+    
     if (email === 'test@example.com' && password === 'password123') {
       Alert.alert('Success', 'Logged in successfully!');
       onLoginSuccess();
