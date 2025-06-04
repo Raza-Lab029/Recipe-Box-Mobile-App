@@ -1,5 +1,5 @@
-const databaseId = '6825746300122ba54a41'; // Example: real ID from Appwrite
-const collectionId = '6825747a003a01222e2d'; // Example: real collection ID
+const databaseId = '6825746300122ba54a41'; 
+const collectionId = '6825747a003a01222e2d'; 
 
 export const addRecipe = async (
   title: string,
@@ -18,8 +18,8 @@ export const addRecipe = async (
         steps,
         createdBy: userId,
       },
-      [`user:${userId}`], // read permission
-      [`user:${userId}`]  // write permission
+      [`user:${userId}`], 
+      [`user:${userId}`]  
     );
     return res;
   } catch (error) {
